@@ -1,4 +1,4 @@
-""" Topic:9. Boolean Indexing on Series """
+""" Topic:10. Boolean Indexing on Series """
 
 import numpy as np
 import pandas as pd
