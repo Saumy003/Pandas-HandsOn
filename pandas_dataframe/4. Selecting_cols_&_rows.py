@@ -47,7 +47,8 @@ print(student_info.loc["nitish" : "karan"])
 print(student_info.loc[["nitish", "rishab", "rahul"]])
 
 
-# Selecting both rows and cols
+""" Topic: 4 Selecting both rows and cols  """
+
 print(movies.iloc[0:3, 0:3])
 
 print(movies.loc[0:3, "title_x" : "poster_path"])
