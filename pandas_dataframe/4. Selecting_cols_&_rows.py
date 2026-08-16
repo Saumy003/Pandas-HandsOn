@@ -15,7 +15,7 @@ print(movies[["title_x", "year_of_release", "actors"]])
 print(matches[["Team1", "Team2", "WinningTeam"]])
 
 
-""" Selecting ROWS from a DataFrame """
+""" Topic:4 Selecting ROWS from a DataFrame """
 
 student_dict = {
     "name" : ["nitish", "rahul", "rishab", "karan"],
@@ -29,5 +29,25 @@ student_info = pd.DataFrame(student_dict)
 student_info.set_index("name", inplace=True)
 print(student_info)
 
-#select single row
+#iloc --> searches using index position
 
+#select single row
+print(movies.iloc[0 : 11 : 2])
+
+#fancy indexing
+print(movies.iloc[[0, 4, 5]])
+
+#loc --> searches usimg index lables
+
+#select single row
+print(student_info.loc["rahul"])
+
+#select multiple rows
+print(student_info.loc["nitish" : "karan"])
+print(student_info.loc[["nitish", "rishab", "rahul"]])
+
+
+# Selecting both rows and cols
+print(movies.iloc[0:3, 0:3])
+
+print(movies.loc[0:3, "title_x" : "poster_path"])
