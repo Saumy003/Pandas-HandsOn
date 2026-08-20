@@ -14,3 +14,5 @@ print(movies.head(3))
 
 # adding new cols --> from existing ones
 
+movies.dropna(inplace=True)
+movies["lead actor"] = movies["actors"].str.split("|").apply(lambda x : x[0])
