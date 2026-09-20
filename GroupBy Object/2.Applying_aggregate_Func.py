@@ -15,6 +15,3 @@ print(genres.min(numeric_only=True))
 
 # recommend version.
 print(genres["IMDB_Rating"].mean())
-
-
-
