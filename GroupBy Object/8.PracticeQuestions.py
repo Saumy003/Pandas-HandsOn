@@ -23,3 +23,9 @@ temp_df = ipl_deliveries[ipl_deliveries['batsman'] == 'V Kohli']
 print(temp_df.groupby('bowling_team')['batsman_runs'].sum().reset_index())
 
 # Create a function that can return the highest score of any batsman
+
+def highest(batsman):
+    df = ipl_deliveries[ipl_deliveries['batsman'] == batsman]
+    return df.groupby('match_id')['batsman_runs'].sum().sort_values(ascending=False).head(1).values[0]
+
+print(highest('CH Gayle'))
